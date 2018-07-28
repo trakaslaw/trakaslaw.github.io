@@ -26,14 +26,20 @@
 
   <!-- Firebase JS -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
 
-  <script type="text/javascript">
-
-
-
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAq_1IvTbn7tq26DEII-ISYelW8WR3Jqyw",
+      authDomain: "fir-uiauth-9e763.firebaseapp.com",
+      databaseURL: "https://fir-uiauth-9e763.firebaseio.com",
+      projectId: "fir-uiauth-9e763",
+      storageBucket: "fir-uiauth-9e763.appspot.com",
+      messagingSenderId: "120885569986"
+    };
+    firebase.initializeApp(config);
   </script>
+
 </head>
 
 <body id="page-top">
@@ -68,8 +74,13 @@
             <a class="nav-link js-scroll-trigger" href="">Articles and Newsletter</a>
           </li>
         </ul>
-         <a onclick="mainApp.logOut()" class="navbar-brand pull-right"><strong>Logout</strong></a>
       </div>
+      <div>
+        <a onclick="mainApp.logOut()" style="display: hidden" class="btn btn-light btn-sx sr-button pull-right nav-auth" id="logout" style="visibility: hidden !important;">Logout</a>
+        <a href="login.html" class="btn btn-light btn-sx sr-button pull-right nav-auth" id="register">Register</a>
+        <a href="login.html" class="btn btn-light btn-sx sr-button pull-right nav-auth" id="login">Login</a>
+      </div>
+
     </div>
   </nav>
 
@@ -172,107 +183,11 @@
     </div>
   </section>
 
-  <section class="p-0" id="portfolio">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters popup-gallery">
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  Category
-                </div>
-                <div class="project-name">
-                  Project Name
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  Category
-                </div>
-                <div class="project-name">
-                  Project Name
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  Category
-                </div>
-                <div class="project-name">
-                  Project Name
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  Category
-                </div>
-                <div class="project-name">
-                  Project Name
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  Category
-                </div>
-                <div class="project-name">
-                  Project Name
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  Category
-                </div>
-                <div class="project-name">
-                  Project Name
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="bg-dark text-white">
     <div class="container text-center">
-      <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-      <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
+      <h2 class="mb-4">See our projects!</h2>
+      <a class="btn btn-light btn-xl sr-button" href="project.html">Look Here!</a>
     </div>
   </section>
 
@@ -282,7 +197,7 @@
         <div class="col-lg-8 mx-auto text-center">
           <h2 class="section-heading">Let's Get In Touch!</h2>
           <hr class="my-4">
-          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+          <p class="mb-5"></p>
         </div>
       </div>
       <div class="row">
@@ -309,28 +224,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <span class="copyright">Copyright &copy; TTG 2018</span>
-        </div>
-        <div class="col-lg-4">
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">
-                <i class="fa fa-facebook"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-4">
-        </div>
-      </div>
-    </div>
-  </section>
-
 </body>
 <!-- Footer -->
 <footer>
@@ -340,6 +233,8 @@
         <span class="copyright">Copyright &copy; TTG 2018</span>
       </div>
       <div class="col-lg-4">
+      </div>
+      <div class="col-lg-4">
         <ul class="list-inline social-buttons">
           <li class="list-inline-item">
             <a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">
@@ -347,8 +242,6 @@
             </a>
           </li>
         </ul>
-      </div>
-      <div class="col-lg-4">
       </div>
     </div>
   </div>
